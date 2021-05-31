@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*  Start To Do List Application */
+.todo-conntainer{
+    width: 600px;
+    background-color: #f6f6f6;
+    margin: 40px auto 0
+}
+
+.todo-conntainer .add-task {
+    position: relative;
+    padding: 15px;
+    background-color: #009688
+}
+
+
+.todo-conntainer .add-task input  {
+    display: inline-block;
+    padding: 10px 15px;
+    width: calc(100% - 15px);/*  use clac to calxulation any width or any thing*/
+    border: none;
+    background: rgba(255, 255, 255, .3);
+    color: #fff;
+}
+.todo-conntainer .add-task input:focus {
+    outline: none;
+}
+
+.todo-conntainer .add-task .plus {
+    position: absolute;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #009688;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+.todo-conntainer .add-task .plus:hover {
+    transform: rotate(90deg);
+}
+
+.todo-conntainer .tasks-content {
+    padding: 15px
+}
+
+.todo-conntainer .add-task .no-tasks-message {
+    font-size: 15px;
+    color: #777
+}
+
+.todo-conntainer .tasks-content > span {
+    display: block;
+    background-color: #fff;
+    padding: 10px
+}
+
+/*       :not(:last-child)  === >>>>>>>>>>>>>>>>>> put your focus here */
+.todo-conntainer .tasks-content > span:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.todo-conntainer .tasks-content .task-box .delete {
+    float: right;
+    background-color: #E91E63;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.todo-conntainer .tasks-content .task-box.finished {
+    text-decoration: line-through;
+}
+
+.tasks-stats {
+    overflow: hidden;
+    margin: 10px auto;
+    font-size: 12px;
+    width: 600px;
+}
+
+.tasks-stats .tasks-count {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+.tasks-stats .tasks-completed {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    text-align: right;
+}
+
+.tasks-stats .tasks-count span,
+.tasks-stats .tasks-completed span {
+    color: #fff;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin:2px
+}
+
+.tasks-stats .tasks-count span {
+    background-color: #E91E63;
+}
+.tasks-stats .tasks-completed span {
+    background-color: #03A9F4
+}
+
+/*  End To Do List Application */
